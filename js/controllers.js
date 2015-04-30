@@ -2,7 +2,7 @@ angular.module('human-computable-pws.controllers', [])
 .controller("MainController", function($timeout, $scope, chromeStorage){
     //initial values
     $scope.user = "";
-    $scope.pw= 1;
+    $scope.pw=0;
     $scope.selectedSite=null;
    
     //function adding new site to the user
@@ -37,8 +37,9 @@ angular.module('human-computable-pws.controllers', [])
     var tmp;
     function handleMessage(){
         if(tmp.pwValue){
-            $scope.pw = tmp.pwValue;
+            $scope.pw = tmp.pwValue-1;
             console.log("pw: %o", $scope.pw);
+            console.log("ombjects:   %o", $scope.user)
         }
         if(tmp.newUrl){
             $scope.url = tmp.newUrl;

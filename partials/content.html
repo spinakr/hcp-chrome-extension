@@ -5,34 +5,19 @@
             <br>
         </div>
     </div>
-
 </nav>
-   
-<div id="username" ng-hide="user.name" class="animate-hide">
 </div>
 
 
 <div class="container-fluid">
-
-<!--    <div id = "siteSelection" ng-show="user.name">
-        <select ng-options="site.name for site in user.sites" ng-model="selectedSite">
-        </select>
-    
-    </div> -->
 <div id="form-container">
-
-    <!-- <p ng-bind="dataService.url"> </p> -->
-
 
     <hr class="divider">
 
     <div align="center">
         <select ng-model="selectedSite" ng-options="site.name for site in user.sites" class="dropDownColor"  ></select>
     </div>
-
     <hr class="divider" style="margin-bottom: 0;">
-
-
 
     <div id="challenges">
     <div align ="center" class="newSiteButton" ng-show="newSiteButton">
@@ -54,18 +39,6 @@
         </tr>
     </table>
     <hr class="divider" style="margin: 0;">
-        <!--<tr>
-            <td colspan="4" rowspan="5">
-                <div id="password-field" >
-                    <form class="respons">
-                        <input type="text" ng-model="dataService.pw" class="form-control" /> <br /> 
-                        <input type="submit" class="hidden-submit" value="Submit"  />
-
-                    </form>
-                </div>
-            </td>
-        -->
-
     <table align="center" class="challenges">
         <tr>
             <td>0<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][0]}}.png"/></td>

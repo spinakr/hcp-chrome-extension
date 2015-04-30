@@ -6,7 +6,7 @@ if(pwField){
     pwField.addEventListener('input', function (callback){
 
         console.log("input content: " + pwField.value.length);
-        chrome.runtime.sendMessage({pwValue: pwField.value.length}, function(respons){
+        chrome.runtime.sendMessage({pwValue: pwField.value.length+1}, function(respons){
             console.log("Respons pw changed: " + respons);
         });
         
