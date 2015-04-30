@@ -1,0 +1,41 @@
+.animate-hide {
+    -webkit-transition:all linear 0.4s;
+    transition:all linear 0.4s;
+}
+
+.animate-hide.ng-hide {
+    opacity:0;
+}
+
+.hidden-submit{
+    display: none;
+}
+
+.dropDownColor {
+    background-color: #2f2f2f;
+}
+
+.newSiteButton {
+    padding: 5ex;
+
+}
+
+/*.header{
+    background-color: yellow;
+    height: 20ex;
+}
+.footer{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: yellow;
+    height: 10ex;
+    padding:1ex; 
+}
+
+.contents{
+    background-color: gray;
+    height: 100%;
+    padding: 1ex;
+    padding-bottom: 10ex;
+}

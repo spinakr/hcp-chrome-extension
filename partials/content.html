@@ -1,0 +1,96 @@
+<nav class="navbar navbar-default"> 
+    <div class="container"> 
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/main.html">Human Computable Passwords </a>
+            <br>
+        </div>
+    </div>
+
+</nav>
+   
+<div id="username" ng-hide="user.name" class="animate-hide">
+</div>
+
+
+<div class="container-fluid">
+
+<!--    <div id = "siteSelection" ng-show="user.name">
+        <select ng-options="site.name for site in user.sites" ng-model="selectedSite">
+        </select>
+    
+    </div> -->
+<div id="form-container">
+
+    <!-- <p ng-bind="dataService.url"> </p> -->
+
+
+    <hr class="divider">
+
+    <div align="center">
+        <select ng-model="selectedSite" ng-options="site.name for site in user.sites" class="dropDownColor"  ></select>
+    </div>
+
+    <hr class="divider" style="margin-bottom: 0;">
+
+
+
+    <div id="challenges">
+    <div align ="center" class="newSiteButton" ng-show="newSiteButton">
+        <div class="infoBox" >
+            The current site does not have challenges stored in the system. 
+            <hr>
+            <button ng-click="newSite()" class="btn btn-info" ng-show="true" >Add site</button> 
+        </div>
+
+    </div>
+    <div ng-hide="newSiteButton">
+    <table align="center" class="challenges">
+        <tr>
+            <td> <img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][10]}}.png"/>
+             <img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][11]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][12]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][13]}}.png"/></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr class="divider" style="margin: 0;">
+        <!--<tr>
+            <td colspan="4" rowspan="5">
+                <div id="password-field" >
+                    <form class="respons">
+                        <input type="text" ng-model="dataService.pw" class="form-control" /> <br /> 
+                        <input type="submit" class="hidden-submit" value="Submit"  />
+
+                    </form>
+                </div>
+            </td>
+        -->
+
+    <table align="center" class="challenges">
+        <tr>
+            <td>0<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][0]}}.png"/></td>
+            <td>5<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][5]}}.png"/></td>
+        </tr>
+        <tr>
+            <td>1<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][1]}}.png"/></td>
+            <td>6<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][6]}}.png"/></td>
+        </tr>
+        <tr>
+            <td>2<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][2]}}.png"/></td>
+            <td>7<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][7]}}.png"/></td>
+        </tr> 
+        <tr>
+            <td>3<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][3]}}.png"/></td>
+            <td>8<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][8]}}.png"/></td>
+        </tr>
+        <tr>
+            <td>4<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][4]}}.png"/></td>
+            <td>9<img ng-src="letters/letter_{{user.sites[user.sites.indexOf(selectedSite)].challenges[pw][9]}}.png"/></td>
+        </tr>
+    </table>
+    </div>
+
+</div>
+</div>
+
+</div>
