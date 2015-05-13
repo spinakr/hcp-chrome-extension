@@ -4,7 +4,11 @@ angular.module('human-computable-pws.controllers', [])
     $scope.user = "";
     $scope.pw=0;
     $scope.selectedSite=null;
-   
+
+    //example of using badge to notify about rehearsal 
+    chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255]  });
+    chrome.browserAction.setBadgeText({text: '1'});
+
     //function adding new site to the user
     $scope.newSite = function(){
         var newSite = new Site($scope.url);

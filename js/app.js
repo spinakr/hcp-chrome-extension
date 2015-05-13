@@ -2,9 +2,7 @@ var hcp = angular.module('human-computable-pws', [
         'human-computable-pws.controllers',
         'ngAnimate', 
         'chromeStorage',
-        'ngCookies',
-        'ngRoute',
-        'ngResource'
+        'ngRoute'
         ]);
 
 hcp.config( ['$compileProvider', function( $compileProvider  ) {
@@ -38,8 +36,6 @@ function searchList(site, sites){
     return false;
 }
 
-
-
 function Site(name){
     this.name = name;
     this.challenges = [];
@@ -49,12 +45,20 @@ function Site(name){
     }
 }
 
+function getRandInt(){
+    var intArr = new Uint8Array(1);
+    window.crypto.getRandomValues(intArr);
+    if(intArr[0]>=Math.floor(256/26) * 26)
+        return getRandInt();
+    console.log((intArr[0] % 26) + 1);
+    return (intArr[0] % 26);
+}
+
 function randomChallenge(){
     var letters = "abcdefghijklmnopqrstuvwxyz";
     var ch = [];
-
     for(var z=0; z<14; z++){
-        ch.push(letters.charAt(Math.floor(Math.random()* 26)));
+        ch.push(letters.charAt(getRandInt()));
     }
     return ch;
 }
