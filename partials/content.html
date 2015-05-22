@@ -24,6 +24,18 @@
         <div class="infoBox" >
             The current site does not have challenges stored in the system. 
             <hr>
+           
+            <form name="siteClass" class="siteClass">
+                <label for="radio1">Low 
+                    <input type="radio" ng-model="siteClass" value=6 id="radio1">
+               </label>
+                <label for="radio2">Med
+                    <input type="radio" ng-model="siteClass" value=10 id="radio2">
+                </label>
+                <label for="radio3">High 
+                    <input type="radio" ng-model="siteClass" value=15 id="radio3">
+                </label>
+            </form>
             <button ng-click="newSite()" class="btn btn-info" ng-show="true" >Add site</button> 
         </div>
 

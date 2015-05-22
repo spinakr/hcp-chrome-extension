@@ -36,11 +36,10 @@ function searchList(site, sites){
     return false;
 }
 
-function Site(name){
+function Site(name, siteclass){
     this.name = name;
     this.challenges = [];
-
-    for(var j=0; j<14; j++){
+    for(var j=0; j<siteclass; j++){
         this.challenges.push(randomChallenge()); 
     }
 }
@@ -50,7 +49,6 @@ function getRandInt(){
     window.crypto.getRandomValues(intArr);
     if(intArr[0]>=Math.floor(256/26) * 26)
         return getRandInt();
-    console.log((intArr[0] % 26) + 1);
     return (intArr[0] % 26);
 }
 

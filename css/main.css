@@ -20,6 +20,17 @@
 
 }
 
+.siteClass label{
+    display: inline-block;
+    text-align:center;
+}
+
+.siteClass label input[type="radio"] {
+    display: block;
+    margin: 0.5em auto;
+}
+
+
 /*.header{
     background-color: yellow;
     height: 20ex;

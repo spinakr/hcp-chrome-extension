@@ -1,9 +1,9 @@
 chrome.browserAction.onClicked.addListener(function() {
     chrome.windows.create({
         url: chrome.extension.getURL('main.html'),
-        type: 'popup',
+        type: 'panel',
         focused: true,
-        height: 520,
+        height: 550,
         width: 400,
     });
 });
